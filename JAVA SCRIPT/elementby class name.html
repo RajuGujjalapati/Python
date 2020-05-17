@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changestyling()
+        {
+            var cls = document.getElementsByClassName("mypara");
+            for(var i=0;i<cls.length;i++)
+            {     
+                cls[i].style.color = "blue";            }
+        }
+
+         
+    </script>
+</head>
+<body>
+    //if u want to add/changethe data where ever we want then 
+    //we use the class name
+    <p id="p1" class="mypara">This is paragraph 1</p>
+    <p>This is paragraph 2</p>
+    <p  class="mypara">This is paragraph 3</p>
+    <p>This is paragraph 4</p>
+    <p  class="mypara">This is paragraph 5</p>
+    <a  class="mypara" href="#">this is link</a>
+    <br>
+    <button onclick="changestyling()">click</button>
+
+    
+</body>
+</html>

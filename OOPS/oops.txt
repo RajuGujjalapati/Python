@@ -1,0 +1,5 @@
+The concept of OOP in Python focuses on creating reusable code. 
+This concept is also known as DRY (Don't Repeat Yourself).
+ A process of using details from a new class without modifying existing class.
+ Hiding the private details of a class from other objects.
+...

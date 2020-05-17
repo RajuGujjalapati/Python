@@ -1,0 +1,84 @@
+server.py 
+
+#https://www.youtube.com/watch?v=WrtebUkUssc
+
+import socket
+# create a socket object
+print(" I am server I am starting a new stream for any queries :")
+serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# get local machine name
+host = socket.gethostname()
+port = 9999
+# bind to the port
+serversocket.bind((host, port))
+# queue up to 5 requests
+serversocket.listen(5)
+clientsocket,addr = serversocket.accept()
+print("=======> ", clientsocket,addr)
+print("Got a connection from %s" % str(addr))
+
+while True:
+    
+
+    q = clientsocket.recv(2048)
+    print(" ***************> " , q , type(q))
+    qs = q.decode('ascii')
+    print ("========> ", qs, type(qs) )
+
+    if(('USA' in  qs) or ('IND' in qs) or ('UK' in qs)):
+        msg = "Welcome to " + str(qs) 
+        clientsocket.send(msg.encode('ascii'))
+    elif(qs == "STOP"):
+        msg = "STOPPED" 
+        clientsocket.send(msg.encode('ascii'))
+        break
+    else:
+        msg = "Not supporting the country " + qs 
+        clientsocket.send(msg.encode('ascii'))
+
+clientsocket.close()
+
+
+
+print(" Ended herte ")
+
+
+
+
+
+
+
+====================================================================================
+
+
+client.py 
+
+
+#!/usr/bin/python3 # This is client.py file
+import socket
+# create a socket object
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# get local machine name
+host = socket.gethostname()
+port = 9999
+print(host)
+# connection to hostname on the port.
+s.connect((host, port))
+# Receive no more than 1024 bytes
+
+x = 0
+while (x==0):
+    i = input(" enter the country name  : ")
+    s.send(i.encode('ascii'))
+
+    msg = s.recv(1024)
+    print ("========> ", msg.decode('ascii'))
+    msg_str = msg.decode('ascii')
+    if(msg_str == "STOPPED"):
+        break
+
+
+
+s.close()
+
+

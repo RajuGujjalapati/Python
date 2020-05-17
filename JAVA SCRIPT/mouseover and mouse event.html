@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseover</title>
+    <script>
+        function setnewImage()
+        {
+            document.getElementById("img1").src="lion2.png"
+        }
+        function setOldImage()
+        {
+            document.getElementById("img1").src="lion.png"
+        }
+
+
+    </script>
+</head>
+<body>
+    <img  id="img1" onmouseover="setnewImage()" onmouseout="setOldImage()" 
+    src="lion.png" >
+    
+</body>
+</html>

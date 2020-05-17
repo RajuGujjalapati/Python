@@ -1,0 +1,19 @@
+****************ARRAY is an collection of similar data types*************
+syn:-from array import *
+#the '*' represents in array import all functions.
+vals=array('i',[5,4,6,8,4])
+print(vals)
+# we couldn't put float valuse because we are using int data type'i'
+#signed : starts from negative to positive
+#unsigned : starts from zero
+print(vals.bufferinfo())
+#gives output like (343543543(adress),5(size of array))
+print(vals.typecode)
+#gives o/p like type of valuse usen('i')
+#for reverse
+vals.reverse()
+
+#To create the new array with the same data
+newArr=array(vals.typecode, (a for a in vals))
+for e in newArr:	     a*a
+	print(e)

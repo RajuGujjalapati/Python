@@ -1,0 +1,14 @@
+#when we given more than the limit then it shows 'stop iteration'.
+#when we are working with "databases",let it woukd have 1000's of 
+data in databse.when if we want to retrive data from the data base
+'generators play a major role'.Because it continues were it stops.
+########diff of return and yield############
+#RETURN:The Keyword return returns a value from a function,at which time the
+func. then loses its local state.Thus,the next time we call that func,
+it starts over from its first statement.
+######
+#YIELD:yield maintains a state between function calls, and resumes from where it 
+it ;left off, when we call the next() method again.
+so, yield is called in the generator, then the next time the same generator is 
+called we'll pick right back up after the last yield statement.
+

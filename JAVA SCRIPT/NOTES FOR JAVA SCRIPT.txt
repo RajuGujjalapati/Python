@@ -1,0 +1,58 @@
+#java script is used to add some functionality to the browser.
+DOM-DOCUMENT OBJECT MODEL
+$java script can be use in 2 formats one is use <script> in the noraml file.
+$or create the another file with .js extension.
+3 TYPES OF NODE: 1.ELEMENT NODE 2.TEXT NODE 3. ATTRIBUTE NODE
+!statements are the certain instructions to the compter which perform some opeartion.
+here document.write () giving instruction to the computer to print something.
+(;)seperates two statements.
+(//)-indicates single line comment in java script.
+(/*    */)-indicates multiple line coments.
+#whatever we write on the body is also showing the screen.
+####################################################################################
+definition:
+>>>>A variable provides us with a named storage that our program can manupulate.
+>>>>variables are used to store info. tobe refernced & manipuated in a computer program.
+@@@@@screeenshot@@@@@@@@@@@@@@@@@@@@
+1.javascript is loosely typed programming language.
+//you don't need to type the datatype
+//it is not strictly typed.
+
+2.javascript is DYNAMICALLY typed scripting lang.
+//we don't need to specify the datatype name.
+//whichever we defined last will going to override the line.
+####IDENTIFIER#####
+NAMING CONVENTIONS- IDENTIFIER:
+-------------------------------
+--should n't be any predefined keyword.
+--the first chra must be a letter, an underscore(_),or a dollar($).
+--variables are case sensitive.
+##########operators############
+def:
+which are used to assign values, compare values, perform arithematic oper , and more
+--Arithematic oper//@@@@@screenshot@@@@@@
+--comparision oper
+--logical oper
+-- assignment oper
+--conditional oper
+--string oper
+--type oper
+--bitwise oper
+
+##check google for operator precendence
+#########CONDITIONAL STATEMENTS###########
+@SCREENSHOT@@
+--if, ifelse, else block statements are present in conditional statements
+--this conditional statements will going to execute as previous programming languages
+--But with diff syntax.
+#########SWITCH CASE CONTROL STATEMNTS#####
+switch(var)
+{
+   case 1:
+	document.write("<h1>sunday</h1>")
+   case 2:
+	document.write("<h1>monday</h1>")
+
+#########objects###############
+name -'attribute' give same for both the names , because we want to select one at a time right!.
+

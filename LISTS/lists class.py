@@ -1,0 +1,26 @@
+L1=[2,3,4,5,6,7]
+'''for x in L1:
+    print(x)
+    print(L1)
+    print(L1[0])
+    print(L1[3])
+    print(L1[0:3])
+    print(L1[-1:-4])
+    print(L1[0:2])
+    print(L1[2:0])
+    print(L1[-3:])#this will  print
+print(L1[::-1])'''
+L1.extend([2,3,4])
+print(L1)
+L1.insert(2,30)
+print(L1)
+print(L1[-7:])
+print(L1.pop())
+print(L1)
+print(L1.pop(4))
+print(L1)
+print(L1.remove(30))
+print(L1.reverse())
+print(L1)
+res=L1.index(3,0,len(L1))
+print(res)

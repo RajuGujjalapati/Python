@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+       /*when we need to create a company/showroom we have to update the values of data
+      every single day right!
+      should we write code daily to update the values or should we creates objects?
+       to add! */
+    <script>
+        /* Booleans can be objects(if defined with new keyword)
+          Numbers can be objects(if defined with new keyword)
+          strings can be objects(if defined with new keyword)
+          Dates are always objects
+           maths are always objects
+            regular expressions always objects
+            */
+            //object creates with (new) keyword
+        
+
+        
+
+        function Car(car_model,car_country,price)//object//constructor
+        {
+            this.car_model = car_model;
+            this.car_country = car_country;
+            this.price = price;
+            this.teslaAutopilot= function()
+            {
+                document.write("<h1>This car has auto pilot</h1>");
+               
+            }
+        }
+        Car.fueltype="Electric";
+        //Car.newFn=function()//new methods in object 
+        //delete Car.price;//this deletes the data in price
+        //Car.price="45000"//changed number to string
+        //typeof()-checks the type of object.
+        Car.price=45999;
+        
+            document.write("<h1>"+Car.fueltype+"</h1>");
+            document.write("<h1>"+typeof(Car.price)+"</h1>");
+        
+        
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

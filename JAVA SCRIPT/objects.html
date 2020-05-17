@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+       /*when we need to create a company/showroom we have to update the values of data
+      every single day right!
+      should we write code daily to update the values or should we creates objects?
+       to add! */
+    <script>
+       /* var Car={ //starts with capital letter
+        
+            cars_model:"bmw",
+            cars_country:"india",
+            price:34500,
+
+
+            bmwAutopilot : function()
+            {
+
+                document.write("<h1>This car has auto pilot</h1>");
+            }
+
+        }
+        Car.bmwAutopilot();
+        //document.write(Car.bmwAutopilot);*/
+        function Cars(cars_model,cars_country,price)//object
+        {
+            this.cars_model = cars_model;
+            this.cars_country = cars_country;
+            this.price = price;
+            this.bmwAutopilot= function()
+            {
+                document.write("<h1>This car has auto pilot</h1>");
+               
+            }
+        }
+        var c1 = new Cars("TEsla","model 3",56700);
+        c1.bmwAutopilot();
+        var c2 = new Cars("Tvs","suv",780090);
+
+        document.write("<h2>"+c2.cars_model+"</h2>")
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

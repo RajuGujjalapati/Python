@@ -1,0 +1,159 @@
+
+
+withoutthreads.py :
+---------------------
+
+import time
+t1 = time.time()
+
+def square(num):
+    for i in num:
+        time.sleep(0.5)
+        print("square : " , i*i)
+
+
+def cube(num1):
+    for x in num1:
+        time.sleep(0.2)
+        print("cube : " , x*x*x)
+
+
+arr = [2,3,4,5]
+
+print(t1)
+square(arr)
+cube(arr)
+
+
+t2 = time.time()
+print(t2)
+
+print(" Completed in :", t2-t1)
+
+
+
+==================================================================================
+
+
+withthreads.py :
+-----------------
+
+
+# https://www.youtube.com/watch?v=6eqC1WTlIqc
+
+import time
+import threading
+import os
+
+
+def square(num):
+    for i in num:
+        time.sleep(0.5)
+        print("square : " , i*i)
+
+
+def cube(num1):
+    for x in num1:
+        time.sleep(0.2)
+        print("cube : " , x*x*x)
+
+
+L1 = [2,3,4,5]
+t = time.time()
+'''
+square(arr)
+cube(arr)
+
+'''
+
+t1 = threading.Thread(target=square, args=(L1,))
+t2 = threading.Thread(target=cube, args=(L1,))
+
+t1.start()
+t2.start()
+
+t1.join()
+t2.join()
+
+
+print(" Completed in :", time.time()-t)
+
+
+
+
+
+
+=============================================================================
+
+
+sqlscr.py :
+-------------
+
+
+import pymysql as p
+db = p.connect('localhost','root','SaiKrishna@006','world')
+#### ip adress , user , password , schema/ database name 
+mycursor = db.cursor()
+
+
+#### selelect query ....
+
+#q1 = "select * from city where id = 4104;"
+q1 = ['select count(*) from city;',"select * from city where id = 4104;"]
+data = []
+for query in q1:
+    mycursor.execute(query)
+    d = mycursor.fetchall()
+    data.append(d)
+db.close()
+
+print(data)
+
+'''
+
+##### insert query
+
+q1 = "INSERT INTO city (ID, NAME, CountryCode, District, Population) VALUES (4157, 'SHEKAR', 'AFG', 'SHEKAR', 7776667);"
+mycursor.execute(q1)
+db.commit()
+db.close()
+'''
+
+
+
+===============================================================================================
+
+
+sendemail :
+-------------
+
+
+import smtplib
+
+def gmailsend(body):
+	server = 'smtp.gmail.com'
+	port = 587
+	sender = 'yaadv8714@gmail.com'
+	password = 'password@123'
+	receivers = 'yaadv8714@gmail.com;aael.sharma@gmail.com'
+	fromPerson = 'TechOffice Automation'
+	subject = 'Application Health Check - Automated'
+	message = "From:"+fromPerson+"\nTo:"+receivers+"\nMIME-Version: 1.0\nContent-Type: text/html\nSubject: "+subject+"\n\n\n\nHi<br><br> Please find the below checks <br><br>"+body
+	
+	smtpObj = smtplib.SMTP(server,int(port))
+	smtpObj.starttls()
+	smtpObj.login(sender,password) 
+	smtpObj.sendmail(sender,receivers.split(';'),message)
+	print("Mail Sent Successfully")
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom manipulations</title>
+            //Dom manipulations and getelementbyID method
+    <script>
+        function buttonclick()
+        {
+            //alert("Button click");
+            //we can do this in two ways 
+
+            document.getElementById("heading2").innerHTML="New string";
+            //we are calling the id and we are changing the value/data present in
+            //below h2 tag with new name ..we can show this in alert also.
+            //alert("some thing ")
+            var str=document.getElementById("heading2").innerHTML;
+            alert(str)
+        }
+        //buttonclick();//if we call here it will show immediatly
+        //i want this alert message when i clicked the button right!
+
+
+    </script>
+    */
+</head>
+<body>
+    //giving functionality to do the some task to button.
+    <button onclick="buttonclick()">Click</button>
+    <h2 id="heading2">Some Random text</h2>
+</body>
+</html>

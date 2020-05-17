@@ -1,0 +1,7 @@
+loc:
+1.It is used to fiiltering rows and selecting columns by label(index or col.names)
+2.it includes the both first and last number while slicing.[0:2]-0,1,2
+iloc:
+1.It is used for filtering rows and selecting columns by integer positions.
+2.It includes the first number and excludes the last number(acts like range function).
+[0:2]-0,1

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changestyling()
+        {
+            var para = document.getElementsByTagName("p");
+            for(var i=0;i<para.length;i++)
+            {     
+                para[i].style.color = 'red';
+            }
+        }
+
+         
+    </script>
+</head>
+<body>
+    //if we wNt to change the as per the 'tag' name then use tag
+    <p>This is paragraph 1</p>
+    <p>This is paragraph 2</p>
+    <p>This is paragraph 3</p>
+    <p>This is paragraph 4</p>
+    <p>This is paragraph 5</p>
+    <br>
+    <button onclick="changestyling()">click</button>
+
+    
+</body>
+</html>

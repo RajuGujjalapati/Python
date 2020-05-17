@@ -1,0 +1,7 @@
+1. TO SHUTDOWN THE SYSTEM.
+import os
+os.system("shutdown /s /t 1")
+--->to restart the system
+os.system("shutdown /r /t 1")
+-->when your in shell if you want to exit 
+exit()

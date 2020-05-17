@@ -1,0 +1,8 @@
+t1=(2,7,9,15,3,1.8)
+res=len(t1)
+res=max(t1)
+print(res)
+#res=min(t1)
+#res=type(t1)
+res=id(t1)
+print(res)

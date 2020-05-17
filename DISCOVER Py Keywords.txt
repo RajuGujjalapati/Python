@@ -1,0 +1,5 @@
+#Namedtuples
+#Natural language processing
+#pymysql
+#tkinker
+#matpotlib

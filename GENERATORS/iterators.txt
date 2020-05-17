@@ -1,0 +1,13 @@
+An iterator is an object which has __next()__ method.
+which means every time you ask for the next value, an iterator knows how to compute it
+it keeps the info. about the current state of iterable it is working on.
+The iterator calls the next value when you call next() on it.
+An object that uses the __next()__ method is ultimately an iterator.
+**iterator help to produce cleaner looking code because they allows us to work with infinite
+sequences without re-allocating resources for every possible sequence, thus also saving resource
+space.
+**python has the several built-in objects:lists,tuples,strings,dictionaries and even files.
+#think of a website i have a python course in my website.
+#it has a list of values(iterables). when i load it into the website, the iterator comes into
+picture when i click on next button  then it goes into the other file insted of loading it.
+or showing the full website over and over again.
